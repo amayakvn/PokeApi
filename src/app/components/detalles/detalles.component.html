@@ -1,0 +1,27 @@
+<div class="text-center mt-5">
+  <h1>¡ Busca un pokemon por su nombre !</h1>
+    <input type ="text" [(ngModel)]="name" placeholder="squirtle" required>
+    <button (click)="buscarUno()">Buscar</button><br>
+    <span ng-show="myForm.myName.$touched && myForm.myName.$invalid">The name is required</span>
+</div>
+<div class="row justify-content-center mt-5">
+  <div class="card border border-secondary" style="max-width: 900px;">
+    <div class="row p-0">
+      <div class="col-md-8 border border-secondary">
+        <img style='display: none' onload="this.style.display = 'block'" src="{{urlImage}}" class="img-fluid rounded-start border-left" alt="...">
+      </div>
+      <div class="col-md-4 bg-success">
+        <div class="card-body">
+          <h2 class="card-title">Nombre: {{name}}</h2>
+          <h2 class="card-text">ID: {{id}}</h2>
+          <h2 class="card-text">Tipo: {{type}}</h2>
+          <h2 class="card-text">Experiencia base: {{exp}}</h2>
+          <h2 class="card-text">Habilidades: {{abilities}}</h2>
+          <h2 class="card-text">Peso: {{weight}} Lb</h2>
+          <h2 class="card-text">Altura: {{height}} ft</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
